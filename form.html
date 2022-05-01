@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap complied CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Form | User Feedback</title>
+    </head>
+
+
+    <body>
+        <div class="container">
+            <main>
+                <section>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="page-heading">Tell Us What You Think&hellip;</h1>
+
+                            <form id="feedbackForm">
+                                <div class="form-group mb-3">
+                                    <label for="textInput" class="form-label h4 mb-4">
+                                        We'd like to hear from you! Share your thoughts about your experience below.
+                                    </label>
+                                    <textarea id="textArea" name="feedback" aria-label="feedback-input" value="Feedback text." rows="10" placeholder="Start typing feedback here&hellip;" class="form-control form-control-lg mb-1"></textarea>
+                                </div>
+
+                                <p class="h6 fst-italic text-warning mb-3">Enter words "dork, nerd, loser or dweeb" to test censor regex.</p>
+
+                                <!-- Warn Empty Content-->
+                                <div id="warnMessage" class="d-none">
+                                    <p class="mb-4 warn-message">Please type your feedback above to post.</p>
+                                </div>
+                                
+                                <!-- Censor Content-->
+                                <div id="censorMessage" class="d-none">
+                                    <p class="mb-4 censor-message">Please be kind. (Derogatory language will not be posted.)</p>
+                                </div>
+
+                                <button type="submit" id="submitButton" value="submit" class="btn btn-lg btn-outline-secondary">Post Feedback</button>
+                            </form>
+                            
+                            <div class="posted-feedback-display d-none">
+                                <h2 id="postedFeedback" class="h4 my-5"></h2>
+                                
+                                <div id="successMessage" class="d-none">
+                                    <p class="h5">Your feedback has been successfully posted!</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </main>
+        </div>
+
+
+        <!--Bootstrap min. js, jquery and popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
